@@ -11,6 +11,7 @@
 	 * Sempre que implementar uma tag <input> acresentar atributo name, pois o Node necessita (não é frescura minha, nem firula)
 	 * Colocar type dos Botões dos Formulários em submit
 	 * Verificar se os botões do Formulário esta entre a tag <form>
+	 * Não é necessário colocar extensões .html aos links, pois os Routers tratam isso.
 	 
 	 Regras para o Back-end:
 	 * Certificar integridade. 
