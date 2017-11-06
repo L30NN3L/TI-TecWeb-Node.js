@@ -17,7 +17,7 @@
 	 * Certificar integridade. 
 	 Exemplos: 
 	 ( "id de Pessoa é auto_incremental?",
-	   "Não seria necessário Herança(sim Herança no Banco de Dados, se lembram de algo que Claudiney deu aula?) para dividir Pessoa_Fisica para Pessoa_Juricia, já que todo tipo de Pessoa, seja Física ou Jurícia se consta em uma Tabela?"
+	   "Não seria necessário Herança para dividir Pessoa_Fisica para Pessoa_Juricia, já que todo tipo de Pessoa, seja Física ou Jurícia se consta em uma Tabela?"
 	   "id de ONG é auto_incremental?" )
 	   
 	 * Analisar requisitos declarados na View, analisar requisitos declarados no Banco de Dados e Re-projetar o Banco!
