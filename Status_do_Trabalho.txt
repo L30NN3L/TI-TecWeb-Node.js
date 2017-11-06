@@ -1,0 +1,26 @@
+
+	Status do Trabalho:
+	
+	A integração do sistema com a View, Parte Lógica e Banco de Dados se mantém em nível difícil.
+	Precisamos manter contato e testar o site sempre que puder.
+	
+	Existem conflitos nos requisitos, alguns são criados na View, outros no Banco de Dados.
+	Não existe padrão e isso poderia ajudar na integração.
+	
+	Regras para o Front-end:
+	 * Sempre que implementar uma tag <input> acresentar atributo name, pois o Node necessita (não é frescura minha, nem firula)
+	 * Colocar type dos Botões dos Formulários em submit
+	 * Verificar se os botões do Formulário esta entre a tag <form>
+	 
+	 Regras para o Back-end:
+	 * Certificar integridade. Exemplo: ( "id de Pessoa é auto_incremental?",
+										  "Não seria necessário Herança(sim Herança no Banco de Dados, se lembram de algo que Claudiney deu aula?) para dividir Pessoa_Fisica para Pessoa_Juricia, já que todo tipo de Pessoa, seja Física ou Jurícia se consta em uma Tabela?"
+										  "id de ONG é auto_incremental?" )
+	 * Testar pra caralho os formulários e o banco do Azure
+	 
+	 É isso.
+	 
+	 
+	
+	
+	
