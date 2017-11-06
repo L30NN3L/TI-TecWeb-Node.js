@@ -1,0 +1,16 @@
+Para ajudar na integração e na elaboração do projeto o mais rápido possível, segue as instruções abaixo:
+
+No momento estamos utilizando versionamento entre arquivos, então é recomendado que peguem o arquivo mais recente sobre o projeto liberado na raiz da pasta “Trabalho Tema Livre”
+
+O arquivo geralmente é zipado. Baixe-o
+Extraia em uma pasta onde irá constantemente utilizar linha de comando pelo Node, recomendável criar uma pasta direto no C:/ e extrair nesta pasta.
+Caso não tenha Node instalado, é recomendado, só visitar o link e baixar e instalar a versão mais estável: https://nodejs.org/en/
+Abra o Menu Iniciar e procure por: “Node.js command prompt”
+Vá até ao diretório raiz do projeto pela linha de comando
+Digite “nodemon app.js”
+Abra o navegador e digite: “localhost:3000”
+Após tudo isso, caso não for possível visualizar o Projeto, avise no zap.
+Testem todas as funcionalidades possíveis
+Testem acompanhando cada notificação que aparecer no prompt de comando do Node.js
+Ao encontrar erros digam no zap, ou caso for necessário anotar em um arquivo aqui na nuvem.
+ Caso tiverem mais dúvidas perguntem no grupo do zap.
