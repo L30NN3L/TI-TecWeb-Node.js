@@ -1,0 +1,106 @@
+<!-- Declaracao do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- A propriedade Lang define a linguagem -->
+<html lang="pt">
+	<head>
+	
+		<title>NOME DO SISTEMA</title>
+	
+		<meta charset="utf-8"> 		
+		<!-- Para garantir a renderização adequada -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="sobre.css">
+				
+		
+	</head>
+	
+	<body>
+	
+		<div class="jumbotron text-center">
+			<h1>BANNER HOME</h1>
+		  <!-- <img src="taq.jpg" class="img-thumbnail" alt="Cinque Terre" width="771" height="250"> -->
+		</div>
+		
+		<nav class="navbar navbar-default">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">WebSiteName</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastros
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="cadastroONG.html">Cadastro de ONG</a></li>
+					  <li><a href="cadastroVoluntario.html">Cadastro de Volutário</a></li>
+					</ul>
+				</li>
+			    <li><a href="#">Consultas</a></li>
+			    <li><a href="#">Contatos</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+				<li><a data-toggle="modal" href="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		  </div>
+		</nav>		
+		
+		<div class="container">
+			<div class="row">
+				<ul class="bg-bubbles">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- INICIO Login MODAL -->		
+		<div class="modal fade" id="modalLogin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" style="padding:35px 50px;">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+					</div>
+					<div class="modal-body" style="padding:40px 50px;">
+					  <form role="form">
+						<div class="form-group">
+						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário de acesso</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter email" required>
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha de acesso</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Enter password" required>
+						</div>
+						<div class="checkbox">
+						  <label><input type="checkbox" value="" checked>Lembre-me</label>
+						</div>
+						  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Login</button>
+					  </form>
+					</div>
+					<div class="modal-footer">
+					  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+					  <p>Não possui login? <a href="#">Cadastre-se</a></p>
+					  <p>Esqueceu <a href="#">a senha?</a></p>
+					</div>
+			    </div>
+			</div>
+		</div> 
+	    <!-- FIM Login MODAL -->
+		
+	</body>
+</html>
