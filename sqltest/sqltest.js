@@ -1,0 +1,33 @@
+var dbConnection = require('./config/dbConnection.js');
+var moduloDAO = require('./app/models/sqlTestDAO.js');
+
+console.log("1========================================================================================================");
+console.log("dbConnection");
+console.log(dbConnection);
+console.log("2========================================================================================================");
+console.log("moduloDAO");
+console.log(moduloDAO);
+console.log("3========================================================================================================");
+console.log("dbConnection.instance_conn");
+console.log(dbConnection.instance_conn);
+console.log("4========================================================================================================");
+console.log("dbConnection.instance_conn EXEC");
+var instance = dbConnection.instance_conn()
+console.log(instance);
+//instance.conn.close();
+console.log("5========================================================================================================");
+console.log("moduloDAO EXEC");
+console.log(moduloDAO());
+console.log("6========================================================================================================");
+//var instance = dbConnection.instance_conn();
+var construtor = moduloDAO();
+console.log("construtor");
+console.log(modelsqlTesteDAO);
+console.log("7========================================================================================================");
+//var instance2 = dbConnection.instance_conn();
+//console.log(instance2);
+var modelsqlTesteDAO = new construtor(instance);
+console.log("8========================================================================================================");
+console.log(modelsqlTesteDAO);
+console.log("9========================================================================================================");
+console.log(modelsqlTesteDAO.getTeste());

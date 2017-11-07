@@ -71,6 +71,8 @@ TesteDAO.prototype.getTeste = function(){
 
 	//JEITO NUTELLA
 
+	/*
+
 	this._conn
 			.connect()
 			.then( function() 
@@ -101,6 +103,10 @@ TesteDAO.prototype.getTeste = function(){
 
 			});
 
+	*/
+
+	//UM TAL DE TEDIOUS (??????? / LET'SEE)	
+    // https://docs.microsoft.com/pt-br/azure/sql-database/sql-database-connect-query-nodejs
 
 }
 
