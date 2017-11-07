@@ -28,7 +28,7 @@ this._connection.on('connect', function(err)
 
 				       // Read all rows from table
 				    var request = new this._Request(
-				          ""SELECT * "FROM dbo.TESTE",
+				          "SELECT * FROM dbo.TESTE",
 				             function(err, rowCount, rows) 
 				                {
 				                    console.log(rowCount + ' row(s) returned');
