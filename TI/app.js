@@ -15,9 +15,10 @@ rotaLogin(app);
 //CASO QUEIRAM TESTAR CONEXÃO COM BANCO E MODULARIDADE: Digitem no terminal: "node appTesteBD.js"
 
 app.listen(3000, function(){
+	
 	console.log("Servidor funfando");
 	
-	console.log("!+++++++++++++++++++++++++++++++++++++++++!");
+	console.log("\n\n!+++++++++++++++++++++++++++++++++++++++++!");
 	console.log("!TESTE TESTE TESTE TESTE TESTE TESTE TESTE!");
 	console.log("!SITE	SITE	SITE	SITE	SITE	SITE!");
 	console.log("!TESTE TESTE TESTE TESTE TESTE TESTE TESTE!");
@@ -28,6 +29,8 @@ app.listen(3000, function(){
 	console.log("!SITE	SITE	SITE	SITE	SITE	SITE!");
 	console.log("!=========================================!");
 	console.log("CASO QUEIRAM TESTAR CONEXÃO COM BANCO E MODULARIDADE: Digitem no terminal: 'node appTesteBD.js'");
+
+	console.log("\n\nServidor funfando");
 
 });
 
