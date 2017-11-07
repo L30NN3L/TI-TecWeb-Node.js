@@ -25,19 +25,14 @@ app.listen(3000, function(){
 	console.log("!=========================================!");
 	console.log(app);
 
-	
-
-
-
-
-
-
 });
+
 
 
 /*
 
 //DESCOMENTEM CASO QUEIRAM TESTAR CONEXÕES E MODULO DE DAO
+//COMENTEM O app.listen({ ... }); 
 
 console.log("========================================================================================================");
 console.log("APP");

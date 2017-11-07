@@ -30,7 +30,7 @@ module.exports.instance_conn = function(){
 
 	//console.log(sql);
 
- 	var conn = new sql.ConnectionPool(dbConfigLeonel);
+ 	var conn = new sql.ConnectionPool(dbConfig);
 
  	var request = new sql.Request(conn);
 

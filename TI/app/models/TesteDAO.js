@@ -14,7 +14,7 @@ function TesteDAO(connection){
 
 TesteDAO.prototype.getTeste = function(){
 
-	/* 
+	/*
 
 	//JEITO RAIZ
 
@@ -64,10 +64,40 @@ TesteDAO.prototype.getTeste = function(){
 
 
 	});
-*/
+
+	*/
 
 	//JEITO NUTELLA
 
+	this._conn
+			.connect()
+			.then( function() 
+			{
+
+				this._req.query("select * from dbo.Pessoa").then(function() {
+
+					console.log(recordset);
+					this._conn.close();
+
+				}) //não ponha ; aqui!!!
+				.catch(function(err){
+
+					console.log("REQUISIÇÃO FALHA!");
+					console.log(err);
+					this._conn.close();
+
+				});
+
+				//this._conn.close();
+
+			}) //não ponha ; aqui!!!
+			.catch(function(err) 
+			{
+
+				console.log("CONEXÃO FALHA!");
+				console.log(err);
+
+			});
 
 
 }
