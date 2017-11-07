@@ -1,5 +1,5 @@
 var dbConnection = require('../../config/dbConnection');
-var requestSql = dbConnection.request();
+var requestSql = dbConnection.request;
 
 module.exports = function(app){
 	app.get('/cadastroVoluntario', function(req,res){

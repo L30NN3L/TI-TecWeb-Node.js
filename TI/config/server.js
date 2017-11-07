@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true})); //para funcionar o Body-parser
 consign()   //Inclusão de rotas e dbConnection ao aplicativo
 	.include('app/routes')
 	.then('config/dbConnection.js')
+	.then('app/models')
 	.into(app);
 
 module.exports = app; //aplicativo montado estruturalmente para uso

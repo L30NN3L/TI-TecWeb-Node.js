@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.1.2",
     "consign": "^0.1.6",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
