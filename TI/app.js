@@ -27,6 +27,7 @@ app.listen(3000, function(){
 	console.log("!TESTE TESTE TESTE TESTE TESTE TESTE TESTE!");
 	console.log("!SITE	SITE	SITE	SITE	SITE	SITE!");
 	console.log("!=========================================!");
+	console.log("CASO QUEIRAM TESTAR CONEXÃO COM BANCO E MODULARIDADE: Digitem no terminal: 'node appTesteBD.js'");
 
 });
 
