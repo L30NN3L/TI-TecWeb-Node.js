@@ -34,9 +34,10 @@ app.listen(3000, function(){
 
 });
 
+
 /*
 
-DESCOMENTEM CASO QUEIRAM TESTAR CONEXÕES E MODULO DE DAO
+//DESCOMENTEM CASO QUEIRAM TESTAR CONEXÕES E MODULO DE DAO
 
 console.log("========================================================================================================");
 console.log("APP");
@@ -78,6 +79,8 @@ console.log("MODEL.GETTESTE");
 console.log(model.getTeste);
 console.log("========================================================================================================");
 console.log("MODEL.GETTESTE EXEC");
-console.log(model.getTeste());
+
+console.log(" CONSOLE.LOG(model.getTeste()): " + model.getTeste());
+console.log("--------------------------------------------------------------------------------------------------------");
 
 */

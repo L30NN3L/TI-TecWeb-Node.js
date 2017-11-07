@@ -14,6 +14,9 @@ function TesteDAO(connection){
 
 TesteDAO.prototype.getTeste = function(){
 
+	/* 
+
+	//JEITO RAIZ
 
 	console.log("========================================================================================================");
 	console.log("VIEW _CONN");
@@ -26,6 +29,7 @@ TesteDAO.prototype.getTeste = function(){
 
 		if(err){
 			console.log("DEU PAU NA CONEXÃO!");
+			console.log("ERRO: " + err);
 			console.log(err);
 			return;
 		}
@@ -36,6 +40,7 @@ TesteDAO.prototype.getTeste = function(){
 
 				if(err){
 					console.log("DEU PAU NA REQUISIÇÃO!");
+					console.log("ERRO: " + err);
 					console.log(err);
 					return;
 
@@ -52,13 +57,17 @@ TesteDAO.prototype.getTeste = function(){
 				console.log("CONEXÃO FECHADA");
 				//console.log(this._conn);
 
-			})
+			});
 
 		}
 
 
 
-	})
+	});
+*/
+
+	//JEITO NUTELLA
+
 
 
 }
