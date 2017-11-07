@@ -11,7 +11,7 @@ var rotaLogin = require('./app/routes/login');
 rotaLogin(app);
 */
 
-
+/*
 
 
 app.listen(3000, function(){
@@ -27,16 +27,16 @@ app.listen(3000, function(){
 
 });
 
+*/
 
 
-/*
 
 //DESCOMENTEM CASO QUEIRAM TESTAR CONEXÕES E MODULO DE DAO
 //COMENTEM O app.listen({ ... }); 
 
 console.log("========================================================================================================");
 console.log("APP");
-console.log(app);
+console.log("APP: " + app);
 console.log("========================================================================================================");
 console.log("APP.APP");
 console.log(app.app);
@@ -78,4 +78,3 @@ console.log("MODEL.GETTESTE EXEC");
 console.log(" CONSOLE.LOG(model.getTeste()): " + model.getTeste());
 console.log("--------------------------------------------------------------------------------------------------------");
 
-*/

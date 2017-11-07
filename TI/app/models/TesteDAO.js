@@ -1,10 +1,12 @@
 function TesteDAO(connection){
 
 	//var instanceConn = app.config.dbConnection.instance_conn();
+	/*
 	console.log("========================================================================================================");
 	console.log("VIEW CONNECTION");
 
 	console.log(connection)
+	*/
 
 	this._conn = connection.conn;
 	this._req = connection.request;
