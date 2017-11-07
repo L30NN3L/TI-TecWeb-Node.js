@@ -18,7 +18,7 @@ var dbConfigLeonel = {
 	server: "leonnell.database.windows.net",
 	database: "TesteSQL",
 	user: "Leon.net",
-	password: "hugha13579!@!",
+	password: "sqlTeste135",
 	options: {
 		encrypt: true
 	}
