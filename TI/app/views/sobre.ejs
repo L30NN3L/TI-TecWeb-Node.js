@@ -2,105 +2,293 @@
 <!DOCTYPE html>
 <!-- A propriedade Lang define a linguagem -->
 <html lang="pt">
-	<head>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<META NAME="KEYWORDS" CONTENT="ong, organização social, instituto, projeto social">
+	<META NAME="Description" CONTENT="Informações sobre ONGs, organizações sociais, oscips, fundações, Associações, etc. Exibe comentários, fotos e vídeos sobre as ongs cadastradas. Descubra como doar ou fazer trabalho voluntário.">
+	<title>Quem somos - Portal das Ongs</title>
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="estiloOngs.css" rel="stylesheet" type="text/css">
 	
-		<title>NOME DO SISTEMA</title>
-	
-		<meta charset="utf-8"> 		
-		<!-- Para garantir a renderiza?o adequada -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container-fluid" >
+		<div class="row">
+			<div class="col-md-12 col-sm-12 hidden-xs " >
+				<div class="row" style="height:80px;background-color:#146;">
+					<div class="container">
+						<div class="col-md-2 col-sm-2 hidden-xs" >
+							<div style="padding-top:10px;">
+								<a href="/"><img src="images/portal-logo.png" width="84" height="60" border="0" alt="Portal das ONGs"></a>
+							</div>
+						</div>
+						<div class="col-md-8 hidden-sm hidden-xs" style="padding-top:25px;" >
+							<form name="frmPesquisarPadrinho" ">
+								<span class="textobarrapesquisa">Cidade:</span></td>
+								<input type="Text" name="cidade" size="18" maxlength="100" />&nbsp;&nbsp;
+								<span class="textobarrapesquisa">Tipo: </span>
+								<select size="1" name="tipo" style="height:27px;">
+									<option value=""></option>          
+									<option value="Animais">ONGs de Animais</option>        
+									<option value="Apoio a Mulheres">ONGs de Apoio a Mulheres</option>        
+									<option value="Arte">ONGs de Arte</option>        
+									<option value="Crianças">ONGs de Crianças</option>        
+									<option value="Cultura">ONGs de Cultura</option>        
+									<option value="Dependentes Químicos">ONGs de Dependentes Químicos</option>        
+									<option value="Direitos Humanos">ONGs de Direitos Humanos</option>        
+									<option value="Doação de Órgãos">ONGs de Doação de Órgãos</option>        
+									<option value="Educação">ONGs de Educação</option>        
+									<option value="Educação Ambiental">ONGs de Educação Ambiental</option>        
+									<option value="Finanças">ONGs de Finanças</option>        
+									<option value="Geração de Renda">ONGs de Geração de Renda</option>        
+									<option value="Idosos">ONGs de Idosos</option>        
+									<option value="Medicamentos">ONGs de Medicamentos</option>        
+									<option value="Meio Ambiente">ONGs de Meio Ambiente</option>        
+									<option value="Moradia">ONGs de Moradia</option>        
+									<option value="Reciclagem">ONGs de Reciclagem</option>        
+									<option value="Saúde">ONGs de Saúde</option>        
+									<option value="Situações de Emergência">ONGs de Situações de Emergência</option>        
+									<option value="Tecnologia">ONGs de Tecnologia</option>        
+									<option value="Trabalho">ONGs de Trabalho</option>        
+									<option value="Voluntariado">ONGs de Voluntariado</option>        
+											  
+								</select>&nbsp;
+								<input type="submit" style="background-color:#f0ad4e;border-style:none;" class="btn btn-md btn-primary" value="Filtrar" name="Btn" >
+							</form>
+
+
+							</div>
+							<div class="col-md-2 hidden-sm hidden-xs" style="padding-top:25px;" >
+								<a href="/" target="_blank"><img src="images/icone_facebook.png" width="30" height="30" border="0" alt="facebook Portal das Ongs"></a>
+								<a href="/" target="_blank"><img src="images/icone_instagram.png" width="30" height="30" border="0" alt="instagram Portal das Ongs"></a>
+								<a href="/" target="_blank"><img src="images/icone_twitter.png" width="30" height="30" border="0" alt="twitter Portal das Ongs"></a>
+							</div>
+							
+						</div>
+					</div>
+			
+					<div class="row" style="height:40px;background-color:#f0ad4e;color:#fff;padding-top:5px;font-size:14px;">
+						<div class="container" >
+							<div class="col-md-1 col-sm-1 hidden-xs"  style="padding-top:8px;">
+								<div style="display:inline;">
+								<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="color:#fff;"></span></a>
+								</div>
+							</div>	
+					
+					<!-- barra de menu para desktop -->
+					<div class="col-md-10 hidden-sm hidden-xs" style="margin-left:-50px;" >
+						
+						<a href="/cadastroVoluntario"><span style="color:#fff"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <B>CADASTRO DE VOLUNTÁRIO&nbsp;&nbsp;|&nbsp;&nbsp;</B></span></a>
+						<a href="/cadastroOng"><span style="color:#fff"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <B>CADASTRO DE ONG&nbsp;&nbsp;|&nbsp;&nbsp;</B></span></a>
+						
+						<div class="dropdown" style="color:#fff;display:inline;padding-top:-7px;">
+						  <button style="background-color:transparent;border-style:none;color:#fff;font-size:14px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<B>APRENDA</B>
+							<span class="caret"></span>
+						  </button>|&nbsp;&nbsp;
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="/aprendaOng">O que é uma ONG</a></li>
+							<li><a href="/aprendaCriarOng">Como criar uma ONG</a></li>
+						  </ul>
+						</div>
+						<a href="/sobre"><span style="color:#fff"><b>SOBRE &nbsp;&nbsp;|&nbsp;&nbsp;</b></span></a>
+						
+					</div>
+					<!--fim da barra de menu para desktop -->
+					
+					
+					<!-- barra de menu para tablet -->
+					<div class="hidden-lg hidden-md col-sm-7 hidden-xs" style="margin-left:-50px;" >
+						
+						<div class="dropdown" style="color:#fff;padding-right:30px;display:inline;padding-top:-7px;">
+						  <button style="background-color:transparent;border-style:none;color:#fff;font-size:14px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							LISTA DE ONGS
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="/cadastroVoluntario">CADASTRO DE VOLUNTÁRIO</a></li>
+							<li><a href="/cadastroOng">CADASTRO DE ONG</a></li>										
+							<li role="separator" class="divider"></li>
+							<li><a href="/aprendaOng">O que é uma ONG</a></li>
+							<li><a href="/aprendaCriarOng">Como criar uma ONG</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="/sobre">SOBRE</a></li>
+							
+						  </ul>
+						</div>
+						
+					</div>
+					<!--fim da barra de menu para tablet -->
+					
+					
+				</div>
+			</div>
 		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="sobre.css">
-				
 		
-	</head>
-	
-	<body>
-	
-		<div class="jumbotron text-center">
-			<h1>BANNER HOME</h1>
-		  <!-- <img src="taq.jpg" class="img-thumbnail" alt="Cinque Terre" width="771" height="250"> -->
+		
+			<!-- barra de pesquisa para tablet -->
+			<div class="row " style="background-color:#e7e7e7;" >
+				<div class="container">
+					<div class="col-md-12 col-sm-12 hidden-xs text-left " style="">
+						<div class="hidden-lg hidden-md col-sm-12 hidden-xs text-left" style="margin-left:-10px;padding-top:10px;height:50px;">
+														
+							<form name="frmPesquisarPadrinho">
+								<span class="textobarrapesquisa">Cidade:</span></td>
+								<input type="Text" name="Cidade" size="7" maxlength="100" />&nbsp;&nbsp;
+								<span class="textobarrapesquisa">Tipo: </span>
+								<select size="1" name="Tipo" style="height:27px;">
+									<option value=""></option>          
+									<option value="Animais">ONGs de Animais</option>        
+									<option value="Apoio a Mulheres">ONGs de Apoio a Mulheres</option>        
+									<option value="Arte">ONGs de Arte</option>        
+									<option value="Crianças">ONGs de Crianças</option>        
+									<option value="Cultura">ONGs de Cultura</option>        
+									<option value="Dependentes Químicos">ONGs de Dependentes Químicos</option>        
+									<option value="Direitos Humanos">ONGs de Direitos Humanos</option>        
+									<option value="Doação de Órgãos">ONGs de Doação de Órgãos</option>        
+									<option value="Educação">ONGs de Educação</option>        
+									<option value="Educação Ambiental">ONGs de Educação Ambiental</option>        
+									<option value="Finanças">ONGs de Finanças</option>        
+									<option value="Geração de Renda">ONGs de Geração de Renda</option>        
+									<option value="Idosos">ONGs de Idosos</option>        
+									<option value="Medicamentos">ONGs de Medicamentos</option>        
+									<option value="Meio Ambiente">ONGs de Meio Ambiente</option>        
+									<option value="Moradia">ONGs de Moradia</option>        
+									<option value="Outras">ONGs de Outras</option>        
+									<option value="Reciclagem">ONGs de Reciclagem</option>        
+									<option value="Saúde">ONGs de Saúde</option>        
+									<option value="Situações de Emergência">ONGs de Situações de Emergência</option>        
+									<option value="Tecnologia">ONGs de Tecnologia</option>        
+									<option value="Trabalho">ONGs de Trabalho</option>        
+									<option value="Voluntariado">ONGs de Voluntariado</option>        
+								</select>&nbsp;
+								<input type="submit" style="background-color:#f0ad4e;border-style:none;" class="btn btn-md btn-primary" value="Filtrar" name="Btn" >
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fim da barra de pesquisa para tablet -->
+
+
 		</div>
 		
-		<nav class="navbar navbar-default">
-		  <div class="container">
+		
+
+		<!-- para celular -->
+		<div class="hidden-lg hidden-md hidden-sm col-xs-12" >
+			<nav class="navbar navbar-default"  role="navigation" style="margin-bottom:0px;">
+		<div class="container-fluid" >
+		
 			<div class="navbar-header">
-			  <a class="navbar-brand" href="#">WebSiteName</a>
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a  href="/"><img class="visible-xs" src="images/Logo_ongsbrasil_novo.png" width="61" height="40" alt="Portal das Ongs" border="0" style="padding-top:5px;"></a>
+			  
 			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="sobre.html">Sobre</a></li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastros
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="cadastroONG.html">Cadastro de ONG</a></li>
-					  <li><a href="cadastroVoluntario.html">Cadastro de Volut?io</a></li>
-					</ul>
-				</li>
-			    <li><a href="#">Consultas</a></li>
-			    <li><a href="#">Contatos</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
-				<li><a data-toggle="modal" href="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-			</ul>
-		  </div>
-		</nav>		
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="itemmenumobile"><a href="/cadastroVoluntario">Cadastro de Voluntário</a></li>
+				<li class="itemmenumobile"><a href="/cadastroOng"><span class="itemmenu">Cadastro de ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/aprendaOng"><span class="itemmenu">O que é uma ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/aprendaCriarOng"><span class="itemmenu">Como criar uma ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/sobre"><span class="itemmenu">Sobre</span></a></li>
+				
+			  </ul>
+			</div><!-- /.navbar-collapse -->
 		
-		<div class="container">
-			<div class="row">
-				<ul class="bg-bubbles">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
+		</div><!-- /.container-fluid -->
+	<!-- </div> -->
+	</nav>
+
+	<div class="row text-center" style="background-color:#f0ad4e;padding-top:5px;padding-bottom:5px;">
+		<a href="\" target="_blank"><img src="images/icone_facebook_branco.png" width="30" height="30" border="0" alt="facebook portal das ongs"></a>&nbsp;&nbsp;
+		<a href="\" target="_blank"><img src="images/icone_instagram_branco.png" width="30" height="30" border="0" alt="instagram portal das ongs"></a>&nbsp;&nbsp;
+		<a href="\" target="_blank"><img src="images/icone_twitter_branco.png" width="30" height="30" border="0" alt="twitter portal das ongs"></a>&nbsp;&nbsp;
+		
+	</div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
 		</div>
 		
-		<!-- INICIO Login MODAL -->		
-		<div class="modal fade" id="modalLogin" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header" style="padding:35px 50px;">
-					  <button type="button" class="close" data-dismiss="modal">&times;</button>
-					  <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-					</div>
-					<div class="modal-body" style="padding:40px 50px;">
-					  <form role="form">
-						<div class="form-group">
-						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usu?io de acesso</label>
-						  <input type="text" class="form-control" id="usrname" placeholder="Enter email" required>
-						</div>
-						<div class="form-group">
-						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha de acesso</label>
-						  <input type="text" class="form-control" id="psw" placeholder="Enter password" required>
-						</div>
-						<div class="checkbox">
-						  <label><input type="checkbox" value="" checked>Lembre-me</label>
-						</div>
-						  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Login</button>
-					  </form>
-					</div>
-					<div class="modal-footer">
-					  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-					  <p>N? possui login? <a href="#">Cadastre-se</a></p>
-					  <p>Esqueceu <a href="#">a senha?</a></p>
-					</div>
-			    </div>
+	</div>	
+	</div><!-- para desktop -->
+	<div class="col-md-12 hidden-sm hidden-xs text-center"  style="padding-top:17px;" >
+		<div class="separador15linhas"></div>
+		<div class="separador30linhas"></div>
+		<div class="separador30linhas"></div>
+	</div>
+
+	<!-- para tablet -->
+	<div class="hidden-lg hidden-md col-sm-12 hidden-xs text-center"  style="padding-top:20px;" >
+		<div class="separador15linhas"></div>
+		<div class="separador30linhas"></div>
+	</div>
+
+	
+	
+	<div class="row">
+			<div class="col-md-12 col-12 col-xs-12 text-center">
+				 <span class="h1"><h1 style="display:inline;">Sobre o portal das ONGs</h1>.</span><br>
+				 <span class="h3"><b> Informações!</b></span>
 			</div>
-		</div> 
-	    <!-- FIM Login MODAL -->
-		
-	</body>
+    </div>
+	<div class="separador30linhas"></div>
+				</div>
+				
+				
+						<table width= "100%" cellpadding ="0" cellspacing ="0" align="center" border="0">
+						<tr>
+						<td  valign ="top">
+						<table width="95%" border="0" cellpadding="0" cellspacing="0" align=center>
+	
+	<tr><td>
+		<table border="0" cellpadding="1" cellspacing="0" align=left   width="100%">
+			
+					<tr><td><img src="http://www.ongsbrasil.com.br/images/spacer.gif" border=0 height = 20></td></tr>
+					<tr><td colspan="3"><span >O <b>PORTAL DAS ONGs</b> tem como objetivo melhorar a divulgação na internet do trabalho de instituições sociais brasileiras.</span></td></tr>
+					<tr><td ><img src="http://www.ongsbrasil.com.br/images/spacer.gif" border=0 height = 20></td></tr>
+					<tr><td colspan="3">
+						<table>
+						<tr>
+						<td width="130">
+						<img src="images/puc.png" border="0" width="100" height="72">
+						</td>
+						<td><span >Esse projeto é uma iniciativa de alunos do curso de sistemas de informação da PUC Minas,<p>
+						tem como missão tornar mais visível na internet o trabalho das organizações sociais, para que estas consigam mais voluntários e doadores. </span>
+						</td></tr>
+						</table>
+					</td></tr>
+					<tr><td ><img src="http://www.ongsbrasil.com.br/images/spacer.gif" border=0 height = 20></td></tr>
+					</table>
+	</td>
+	</tr>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+
+<!-- Mirrored from www.portaldasongs.com.br/index.html Sun, 05 Nov 2017 14:48:08 GMT -->
 </html>
