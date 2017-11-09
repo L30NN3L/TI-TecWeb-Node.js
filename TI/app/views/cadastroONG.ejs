@@ -33,7 +33,7 @@
 			<div class="container">
 				<fieldset>
 					<h1 align="center" >CADASTRO DE ONG</h1>
-					<form action="/cadastrarvoluntario/salvar" method="POST">
+					<form action="/cadastroONG" method="POST">
 						<div class="panel-body">
 							<br>
 							<legend>Dados da Instituição - ONG</legend>
@@ -134,8 +134,8 @@
 							<legend>Dados do Responsável</legend>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="nomeVoluntario">Nome completo</label>
-									<input type="text" class="form-control" id="nomeVoluntario" name="nomeVoluntario">
+									<label for="nomeResponsavel">Nome completo</label>
+									<input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel">
 								</div>
 								<div class="col-md-4">
 									<label for="dtNascimento">Data de nascimento</label>
@@ -238,10 +238,11 @@
 								</div>
 							</div>
 
+							
 
 
 							<div class="btn-group">
-								  <button type="submit" class="btn btn-default">Salvar</button>
+								  <input type="submit" class="btn btn-default"></input>
 								  <a href="/" class="btn btn-default" role="button">Voltar</a>
 							</div>
 

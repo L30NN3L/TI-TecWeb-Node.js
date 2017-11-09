@@ -1,9 +1,8 @@
+var app = express();
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
-
-
-var app = express();
+var port = 3000;
 app.set('view engine', 'ejs'); //Configuando Engine HTML para EJS
 app.set('views', './app/views'); //Onde renderizar
 

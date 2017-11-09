@@ -1,0 +1,576 @@
+<!-- Declaracao do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- A propriedade Lang define a linguagem -->
+<html lang="pt">
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<META NAME="KEYWORDS" CONTENT="ong, organização social, instituto, projeto social">
+	<META NAME="Description" CONTENT="Informações sobre ONGs, organizações sociais, oscips, fundações, Associações, etc. Exibe comentários, fotos e vídeos sobre as ongs cadastradas. Descubra como doar ou fazer trabalho voluntário.">
+	<title>O que é uma ONG - Portal das Ongs</title>
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
+	<link href="estiloOngs.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+	<div class="container-fluid" >
+		<div class="row">
+			<div class="col-md-12 col-sm-12 hidden-xs " >
+				<div class="row" style="height:80px;background-color:#146;">
+					<div class="container">
+						<div class="col-md-2 col-sm-2 hidden-xs" >
+							<div style="padding-top:10px;">
+								<a href="/"><img src="images/portal-logo.png" width="84" height="60" border="0" alt="Portal das ONGs"></a>
+							</div>
+						</div>
+						<div class="col-md-8 hidden-sm hidden-xs" style="padding-top:25px;" >
+							<form name="frmPesquisarPadrinho" ">
+								<span class="textobarrapesquisa">Cidade:</span></td>
+								<input type="Text" name="cidade" size="18" maxlength="100" />&nbsp;&nbsp;
+								<span class="textobarrapesquisa">Tipo: </span>
+								<select size="1" name="tipo" style="height:27px;">
+									<option value=""></option>          
+									<option value="Animais">ONGs de Animais</option>        
+									<option value="Apoio a Mulheres">ONGs de Apoio a Mulheres</option>        
+									<option value="Arte">ONGs de Arte</option>        
+									<option value="Crianças">ONGs de Crianças</option>        
+									<option value="Cultura">ONGs de Cultura</option>        
+									<option value="Dependentes Químicos">ONGs de Dependentes Químicos</option>        
+									<option value="Direitos Humanos">ONGs de Direitos Humanos</option>        
+									<option value="Doação de Órgãos">ONGs de Doação de Órgãos</option>        
+									<option value="Educação">ONGs de Educação</option>        
+									<option value="Educação Ambiental">ONGs de Educação Ambiental</option>        
+									<option value="Finanças">ONGs de Finanças</option>        
+									<option value="Geração de Renda">ONGs de Geração de Renda</option>        
+									<option value="Idosos">ONGs de Idosos</option>        
+									<option value="Medicamentos">ONGs de Medicamentos</option>        
+									<option value="Meio Ambiente">ONGs de Meio Ambiente</option>        
+									<option value="Moradia">ONGs de Moradia</option>        
+									<option value="Reciclagem">ONGs de Reciclagem</option>        
+									<option value="Saúde">ONGs de Saúde</option>        
+									<option value="Situações de Emergência">ONGs de Situações de Emergência</option>        
+									<option value="Tecnologia">ONGs de Tecnologia</option>        
+									<option value="Trabalho">ONGs de Trabalho</option>        
+									<option value="Voluntariado">ONGs de Voluntariado</option>        
+											  
+								</select>&nbsp;
+								<input type="submit" style="background-color:#f0ad4e;border-style:none;" class="btn btn-md btn-primary" value="Filtrar" name="Btn" >
+							</form>
+
+
+							</div>
+							<div class="col-md-2 hidden-sm hidden-xs" style="padding-top:25px;" >
+								<a href="/" target="_blank"><img src="images/icone_facebook.png" width="30" height="30" border="0" alt="facebook Portal das Ongs"></a>
+								<a href="/" target="_blank"><img src="images/icone_instagram.png" width="30" height="30" border="0" alt="instagram Portal das Ongs"></a>
+								<a href="/" target="_blank"><img src="images/icone_twitter.png" width="30" height="30" border="0" alt="twitter Portal das Ongs"></a>
+							</div>
+							
+						</div>
+					</div>
+			
+					<div class="row" style="height:40px;background-color:#f0ad4e;color:#fff;padding-top:5px;font-size:14px;">
+						<div class="container" >
+							<div class="col-md-1 col-sm-1 hidden-xs"  style="padding-top:8px;">
+								<div style="display:inline;">
+								<!-- <a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="color:#fff;"></span></a> -->
+								</div>
+							</div>	
+					
+					<!-- barra de menu para desktop -->
+					<div class="col-md-10 hidden-sm hidden-xs" style="margin-left:-50px;" >
+						
+						<a href="/cadastroVoluntario"><span style="color:#fff"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <B>HOME&nbsp;&nbsp;|&nbsp;&nbsp;</B></span></a>
+						<a href="/cadastroVoluntario"><span style="color:#fff"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <B>CADASTRO DE VOLUNTÁRIO&nbsp;&nbsp;|&nbsp;&nbsp;</B></span></a>
+						<a href="/cadastroOng"><span style="color:#fff"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <B>CADASTRO DE ONG&nbsp;&nbsp;|&nbsp;&nbsp;</B></span></a>
+						
+						<div class="dropdown" style="color:#fff;display:inline;padding-top:-7px;">
+						  <button style="background-color:transparent;border-style:none;color:#fff;font-size:14px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<B>APRENDA</B>
+							<span class="caret"></span>
+						  </button>|&nbsp;&nbsp;
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="/aprendaOng">O que é uma ONG</a></li>
+							<li><a href="/aprendaCriarOng">Como criar uma ONG</a></li>
+						  </ul>
+						</div>
+						<a href="/sobre"><span style="color:#fff"><b>SOBRE &nbsp;&nbsp;|&nbsp;&nbsp;</b></span></a>
+						<a data-toggle="modal" href="#modalLogin"><span style="color:#fff"><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;Login<b></a>
+					</div>
+					<!--fim da barra de menu para desktop -->
+					
+					
+					<!-- barra de menu para tablet -->
+					<div class="hidden-lg hidden-md col-sm-7 hidden-xs" style="margin-left:-50px;" >
+						
+						<div class="dropdown" style="color:#fff;padding-right:30px;display:inline;padding-top:-7px;">
+						  <button style="background-color:transparent;border-style:none;color:#fff;font-size:14px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							LISTA DE ONGS
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="/cadastroVoluntario">CADASTRO DE VOLUNTÁRIO</a></li>
+							<li><a href="/cadastroOng">CADASTRO DE ONG</a></li>										
+							<li role="separator" class="divider"></li>
+							<li><a href="/aprendaOng">O que é uma ONG</a></li>
+							<li><a href="/aprendaCriarOng">Como criar uma ONG</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="/sobre">SOBRE</a></li>
+						  </ul>
+						</div>
+						<a data-toggle="modal" href="#modalLogin"><span style="color:#fff"><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;Login<b></a>
+					</div>
+					<!--fim da barra de menu para tablet -->
+					
+					
+				</div>
+			</div>
+		
+		
+		
+			<!-- barra de pesquisa para tablet -->
+			<div class="row " style="background-color:#e7e7e7;" >
+				<div class="container">
+					<div class="col-md-12 col-sm-12 hidden-xs text-left " style="">
+						<div class="hidden-lg hidden-md col-sm-12 hidden-xs text-left" style="margin-left:-10px;padding-top:10px;height:50px;">
+														
+							<form name="frmPesquisarPadrinho">
+								<span class="textobarrapesquisa">Cidade:</span></td>
+								<input type="Text" name="Cidade" size="7" maxlength="100" />&nbsp;&nbsp;
+								<span class="textobarrapesquisa">Tipo: </span>
+								<select size="1" name="Tipo" style="height:27px;">
+									<option value=""></option>          
+									<option value="Animais">ONGs de Animais</option>        
+									<option value="Apoio a Mulheres">ONGs de Apoio a Mulheres</option>        
+									<option value="Arte">ONGs de Arte</option>        
+									<option value="Crianças">ONGs de Crianças</option>        
+									<option value="Cultura">ONGs de Cultura</option>        
+									<option value="Dependentes Químicos">ONGs de Dependentes Químicos</option>        
+									<option value="Direitos Humanos">ONGs de Direitos Humanos</option>        
+									<option value="Doação de Órgãos">ONGs de Doação de Órgãos</option>        
+									<option value="Educação">ONGs de Educação</option>        
+									<option value="Educação Ambiental">ONGs de Educação Ambiental</option>        
+									<option value="Finanças">ONGs de Finanças</option>        
+									<option value="Geração de Renda">ONGs de Geração de Renda</option>        
+									<option value="Idosos">ONGs de Idosos</option>        
+									<option value="Medicamentos">ONGs de Medicamentos</option>        
+									<option value="Meio Ambiente">ONGs de Meio Ambiente</option>        
+									<option value="Moradia">ONGs de Moradia</option>        
+									<option value="Outras">ONGs de Outras</option>        
+									<option value="Reciclagem">ONGs de Reciclagem</option>        
+									<option value="Saúde">ONGs de Saúde</option>        
+									<option value="Situações de Emergência">ONGs de Situações de Emergência</option>        
+									<option value="Tecnologia">ONGs de Tecnologia</option>        
+									<option value="Trabalho">ONGs de Trabalho</option>        
+									<option value="Voluntariado">ONGs de Voluntariado</option>        
+								</select>&nbsp;
+								<input type="submit" style="background-color:#f0ad4e;border-style:none;" class="btn btn-md btn-primary" value="Filtrar" name="Btn" >
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fim da barra de pesquisa para tablet -->
+
+
+		</div>
+		
+		
+
+		<!-- para celular -->
+		<div class="hidden-lg hidden-md hidden-sm col-xs-12" >
+			<nav class="navbar navbar-default"  role="navigation" style="margin-bottom:0px;">
+		<div class="container-fluid" >
+		
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a  href="/"><img class="visible-xs" src="images/portal-logo.png" width="61" height="40" alt="Portal das Ongs" border="0" style="padding-top:5px;"></a>
+			  
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="itemmenumobile"><a href="/cadastroVoluntario">Cadastro de Voluntário</a></li>
+				<li class="itemmenumobile"><a href="/cadastroOng"><span class="itemmenu">Cadastro de ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/aprendaOng"><span class="itemmenu">O que é uma ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/aprendaCriarOng"><span class="itemmenu">Como criar uma ONG</span></a></li>
+				<li class="itemmenumobile"><a href="/sobre"><span class="itemmenu">Sobre</span></a></li>
+				<li class="itemmenumobile"><a data-toggle="modal" href="/#modalLogin"><span class="itemmenu">Login</span></a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		
+		</div><!-- /.container-fluid -->
+	<!-- </div> -->
+	</nav>
+
+	<div class="row text-center" style="background-color:#f0ad4e;padding-top:5px;padding-bottom:5px;">
+		<a href="\" target="_blank"><img src="images/icone_facebook_branco.png" width="30" height="30" border="0" alt="facebook portal das ongs"></a>&nbsp;&nbsp;
+		<a href="\" target="_blank"><img src="images/icone_instagram_branco.png" width="30" height="30" border="0" alt="instagram portal das ongs"></a>&nbsp;&nbsp;
+		<a href="\" target="_blank"><img src="images/icone_twitter_branco.png" width="30" height="30" border="0" alt="twitter portal das ongs"></a>&nbsp;&nbsp;
+		
+	</div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+		</div>
+		
+	</div>	
+	</div><!-- para desktop -->
+	<div class="col-md-12 hidden-sm hidden-xs text-center"  style="padding-top:17px;" >
+		<div class="separador15linhas"></div>
+		<div class="separador30linhas"></div>
+		<div class="separador30linhas"></div>
+	</div>
+
+	<!-- para tablet -->
+	<div class="hidden-lg hidden-md col-sm-12 hidden-xs text-center"  style="padding-top:20px;" >
+		<div class="separador15linhas"></div>
+		<div class="separador30linhas"></div>
+	</div>
+
+	<div class="separador15linhas"></div>
+		<div class="separador15linhas"></div>
+		
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<!-- Anuncio Ongs Responsivo -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-3752746938395020"
+		 data-ad-slot="7203164198"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+
+		<div class="separador15linhas"></div>
+	</div>
+	
+</div>	
+</div>
+	<div class="separador30linhas"></div>
+	<div class="row">
+		<div class="container">
+			<div class="col-md-8 col-sm-9 col-xs-12" style="border-right: solid 1px; border-color:#cfcfcf;">
+				
+				<!-- <div class="text-center">
+					<img class="img-responsive" src="images/banner_ongsbrasil.jpg" width="800" height="300" border="0">
+				</div>
+				<div class="separador15linhas hidden-xs"></div> -->
+				
+				<!-- para desktop -->
+				<div class="col-md-12 hidden-sm hidden-xs text-center"   >
+				
+
+	
+
+
+					<div class="separador30linhas"></div>
+				</div>
+				
+				
+						<table width= "100%" cellpadding ="0" cellspacing ="0" align="center" border="0">
+						<tr>
+						<td  valign ="top">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+			
+			<h1 class="h1">Como Criar uma ONG ?</h1>
+			<p class="separador30linhas"></p>
+			  
+			<p>O primeiro passo para se constituir uma organização não governamental (ONG)  é a convocação informal através de telefonemas, e-mails, redes sociais ou outros meios, para atrair pessoas em relação à importância da criação da entidade, marcando uma data e horário para uma apresentação inicial dos objetivos e atividades da mesma.</p>
+			<p class="separador15linhas"></p>
+			<p>Um grupo de pessoas formulará uma proposta de Estatuto que será discutido, analisado, modificado e aprovado pela Assembleia Geral, que será convocada. </p>
+			<p class="separador15linhas"></p>
+			<p>Convidam-se então os interessados em participar da ONG para a Assembleia Geral, onde haverá a fundação da entidade, a aprovação do Estatuto e a eleição da primeira Diretoria. Sugerem-se 5 membros na diretoria.</p>
+			<p class="separador15linhas"></p>
+			<p>O Estatuto deverá conter, entre outros assuntos:</p>
+			<p class="separador15linhas"></p>
+			<ul>
+			<li>o nome e sigla da entidade</li>
+			<li>a sede e foro</li>
+			<li>as finalidades e objetivos</li>
+			<li>as formas de captação de recursos</li>
+			<li>os associados e seus tipos, entrada e saída, direitos e deveres</li>
+			<li>os poderes, tais como assembleia, diretoria, conselho fiscal</li>
+			<li>o tempo de duração</li>
+			<li>como os estatutos poderão ser modificados</li>
+			<li>como a entidade é dissolvida</li>
+			<li>qual o destino do patrimônio, em caso de dissolução</li>
+			</ul>
+			<p class="separador15linhas"></p>
+			<p>No dia da Assembleia, registra-se em livro de presença o nome e assinatura dos presentes. Deve-se registrar também, no Livro de Atas, a aprovação do Estatuto e a eleição da Diretoria e dos Conselhos, assinadas pelos presentes.</p>
+			<p class="separador15linhas"></p>
+			<p>Passa-se então para a eleição da Diretoria, e sua respectiva posse, de acordo com as normas do Estatuto aprovado pela Assembleia Geral, bem como do Conselho Fiscal e outros Conselhos que comporão a ONG. Um advogado poderá ser consultado para assessorar em todos estes passos. </p>
+			<p class="separador15linhas"></p>
+			<p>Para registrar a entidade, será preciso encaminhar a documentação da ONG (Estatuto Social e Ata) ao Cartório de Registro Civil de Pessoas Jurídicas , pagar as taxas e registrar um livro de atas.A seguir obtem-se o CNPJ junto à Secretaria da Receita Federal . Solicita-se então a qualificação como Organização da Sociedade Civil de Interesse Público (OSCIP) no Ministério da Justiça. A organização precisará ainda do Alvará de Licença para Localização e Funcionamento, cadastro na Previdência Social (caso haja funcionários), e o cadastro no CNAS (Conselho Nacional de Assistência Social), um órgão federal que emite Certificado de Entidades de Fins Filantrópicos, entre outros.</p>
+			<p class="separador15linhas"></p>
+			<p>A partir do registro, a entidade tem existência legal, e pode então receber contribuições, atuar para atingir seus objetivos e angariar associados e mantenedores.</p>
+			</p>
+			
+			
+			<p class="separador30linhas"></p>
+		</div>
+
+
+
+
+						</td>
+						</tr>
+						</table>
+					
+						
+			
+			
+			
+				<!-- para desktop -->
+				<div class="col-md-12 hidden-sm hidden-xs text-center">
+					<div class="separador15linhas"></div>
+					<div class="separador15linhas"></div>
+					<div class="separador30linhas"></div>
+
+					
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Anuncio Ongs Links 728 x 15 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:15px"
+     data-ad-client="ca-pub-3752746938395020"
+     data-ad-slot="1410054998"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+					<div class="separador15linhas"></div>
+					<div class="separador15linhas"></div>
+				</div> 
+			
+				<!-- para desktop -->
+				<div class="col-md-12 hidden-sm hidden-xs " >
+				<br>
+				<div class="text-center">
+				
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<!-- Anuncio Ongs Inferior 728 x 90 -->
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-3752746938395020"
+		 data-ad-slot="4249697793"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+				</div>
+				<br>
+				</div>
+				
+				<!-- para tablet e celular -->
+				<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+				<div class="separador30linhas"></div>
+				<div class="separador15linhas"></div>
+				
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<!-- Anuncio Banner Responsivo Inferior -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-3752746938395020"
+		 data-ad-slot="4440570992"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+
+				<br>
+				</div>
+			</div>
+			
+			<div class="col-md-4 hidden-sm hidden-xs text-center"  >
+				
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<!-- Anuncio Ongs  Quadrado 300 x 250 -->
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:300px;height:250px"
+		 data-ad-client="ca-pub-3752746938395020"
+		 data-ad-slot="1156630592"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+				<div class="separador30linhas"></div>
+				<div class="separador15linhas"></div>
+				
+				<!-- <a href="default.asp?Pag=48"><img src="images/banner_anunciar.png" border="0"></a> -->
+				<a href="https://www.risu.com.br/" target="_blank" rel="nofollow" ><img src="images/Banner-Risu-Lateral.png" border="0"></a>
+			</div>
+			
+			<div class="hidden-lg hidden-md col-sm-3 hidden-xs text-center" >
+				
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<!-- Anuncio Ongs Lateral Tablet Responsivo -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-3752746938395020"
+		 data-ad-slot="7208907395"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+				<div class="separador15linhas"></div>
+			</div>
+			
+		</div>
+	</div>
+
+<div class="separador15linhas"></div>
+
+<div class="container-fluid">	
+
+	
+				
+		<!-- para desktop e tablet  -->
+		<div class="col-md-12 col-sm-12 hidden-xs text-center" >
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+				
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+		</div>
+		
+		<div class="row" >
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center" >
+		
+				
+			</div>
+		</div>
+		
+		<!-- para desktop, tablet e celular -->
+		<div class="col-md-12 col-sm-12 col-xs-12" >
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<p class="text-center">
+				
+			</p>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+			<div class="separador15linhas"></div>
+		</div>
+		
+	</div>
+
+	
+	<div class="separador15linhas"></div>
+
+	<div class="container-fluid">	
+
+		<div class="row" style="background-color:#f0ad4e;padding-top:8px;padding-bottom:10px;height:50px;">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+				<a href="/" target="_blank"><img src="images/icone_facebook_branco.png" border="0" width="35" height="35"></a>
+				<a href="/" target="_blank"><img src="images/icone_twitter_branco.png" border="0" width="35" height="35"></a>
+				<a href="/" target="_blank"><img src="images/icone_instagram_branco.png" border="0" width="35" height="35"></a>
+			</div>
+		
+		</div>
+		
+		<div class="row" style="background-color:#000;padding-top:40px;padding-bottom:40px;">
+			<div class="container">
+				<div class="col-md-4 col-sm-4 col-xs-12 text-left" style="line-height:80%" >
+					<p style="color:#f0ad4e;font-size:16px;"><b>Lista de ONGs</b></p>
+					
+					<p><a href="/"><span class="textorodape" style="color:#FFFFFF;">Lista de Ongs por Cidade</span></a></p>
+					<p><a href="/"><span class="textorodape" style="color:#FFFFFF;">Lista de Ongs por Tipo</span></a></p>
+					<p><a href="/"><span class="textorodape" style="color:#FFFFFF;">ONGs para Trabalho Voluntário</span></a></p>
+					<p><a href="/"><span class="textorodape" style="color:#FFFFFF;">ONGs para Voluntariado Empresarial</span></a></p>
+
+				</div>
+				
+				<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+						<div class="separador15linhas"></div>
+						<div class="separador15linhas"></div>
+					</div>
+				
+				<div class="col-md-4 col-sm-4 col-xs-12 text-left" style="line-height:80%" >
+					<p style="color:#f0ad4e;font-size:16px;"><b>Portal das ONGs</b></p>
+					<a href="/sobre"><p class="textorodape" style="color:#FFFFFF;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Quem Somos</p></a>
+					<a href="/enviarEmail"><p class="textorodape" style="color:#FFFFFF;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Fale Conosco</p></a>
+					<a href="/cadastroOng"><p class="textorodape" style="color:#FFFFFF;"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Cadastro ONG</p></a>
+					<a href="/cadastroVoluntario"><p class="textorodape" style="color:#FFFFFF;"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Cadastro Voluntário</p></a>
+					<a href="/"><p class="textorodape" style="color:#FFFFFF;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Busca Avançada</p></a>
+				</div>
+				
+				<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+					<div class="separador15linhas"></div>
+					<div class="separador15linhas"></div>
+				</div>
+				
+				<div class="col-md-4 col-sm-4 col-xs-12 text-left" >
+				<img src="images/puc.png" border="0" width="75" height="53">&nbsp;
+				<p><span class="glyphicon glyphicon-copyright-mark textorodape" aria-hidden="true" style="color:#FFFFFF;">PUC MINAS 2017,</span>
+				<a href="https://github.com/Leonn3s/TI-TecWeb-Node.js" target="_blank"><span class="textorodape" style="color:#FFFFFF;">Repositório GITHUB</span></a></p>
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		
+	</div>
+
+    
+	<!-- INICIO Login MODAL -->		
+		<div class="modal fade" id="modalLogin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" style="padding:35px 50px;">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+					</div>
+					<div class="modal-body" style="padding:40px 50px;">
+					  <form role="form">
+						<div class="form-group">
+						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário de acesso</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter email" required>
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha de acesso</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Enter password" required>
+						</div>
+						<div class="checkbox">
+						  <label><input type="checkbox" value="" checked>Lembre-me</label>
+						</div>
+						  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Login</button>
+					  </form>
+					</div>
+					<div class="modal-footer">
+					  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+					  <p>Não possui login? <a href="#">Cadastre-se</a></p>
+					  <p>Esqueceu <a href="#">a senha?</a></p>
+					</div>
+			    </div>
+			</div>
+		</div> 
+	    <!-- FIM Login MODAL -->
+	
+</body>
+
+<!-- Mirrored from www.portaldasongs.com.br/index.html Sun, 05 Nov 2017 14:48:08 GMT -->
+</html>
