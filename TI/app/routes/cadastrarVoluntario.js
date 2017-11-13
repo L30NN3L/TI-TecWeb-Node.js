@@ -9,7 +9,7 @@ module.exports = function(app){
 	app.post('/cadastrarvoluntario/salvar', function(req,res){
 		//res.send("Esta funcionado!");
 
-		console.log("Cadastro voluntario");
+	/*	console.log("Cadastro voluntario");
 		console.log(req.body);
 		//res.send(req.body);
 
@@ -29,7 +29,7 @@ module.exports = function(app){
 
 		requestSql.query("insert into pessoa(cod_pessoa, nome_pessoa, cpf_pessoa) values('${cpf}','${nome}','${cpf}')");
 		requestSql.query("insert into voluntario(cod_pessoa,cod_ong) values ('${cod_pessoa}','${cod_ong}')");
-		
+		*/
 		//requestSql.query("insert into telefone(cod_pessoa,telefone_contato,telefone2_contato,email_contato,tipo_de_contato) values('${cod_pessoa}','${telefone}','${celular}','${email}','1')");
 		//requestSql.query("insert into telefone(cod_pessoa,rua,bairro,numero,tipo_de_endereco) values('${cod_pessoa}','${rua}','${bairro}','${numero}','1')");
 	

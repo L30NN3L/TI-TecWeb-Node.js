@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8"/>
+            <title>Notícias</title>
+        </head>
+    <body>
+
+        <h1>Notícias</h1>
+
+        <table>            
+            <tr>
+                <td>nome</td>
+                <td>cpf</td>                
+            </tr>
+            <% for(var i = 0; i < testeSelect.length; i++){ %>
+                <tr>
+                    <td><%= testeSelect[i].nome %></td>
+                    <td><%= testeSelect[i].cpf %></td>
+                   
+                </tr>
+            <% } %>
+        </table>
+
+    </body>
+</html>

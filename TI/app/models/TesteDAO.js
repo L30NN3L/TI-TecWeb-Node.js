@@ -8,9 +8,8 @@ function TesteDAO(connection){
 	console.log(connection)
 	*/
 
-	this._conn = connection.conn;
-	this._req = connection.request;
-
+	this.conection = connection;
+	
 
 }
 
@@ -107,6 +106,12 @@ TesteDAO.prototype.getTeste = function(){
 
 	//UM TAL DE TEDIOUS (??????? / LET'SEE)	
     // https://docs.microsoft.com/pt-br/azure/sql-database/sql-database-connect-query-nodejs
+
+
+    //Largamos SQL Server e fomos para MySQL
+
+
+    
 
 }
 

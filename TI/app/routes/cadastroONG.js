@@ -1,93 +1,191 @@
-var dbConnection = require('../../config/dbConnection');
+//var dbConnection = require('../../config/dbConnection');
 
-module.exports = function(app){
+module.exports = function(application){
 
-	var requestSql = dbConnection.request;
-    console.log (requestSql);
-    
-    app.get('/cadastroONG', function(req, res) {
-        //res.render(connection);
-        var requestSql = dbConnection.request();
-        console.log (requestSql);
-        requestSql.query('select * from ONG', function(error, result) {
-            res.render("cadastroONG", result);
-            console.log('Result:', result);
+	
+    application.get('/cadastroONG', function(req, res) {
+       
+
+        res.render("cadastroONG");
+
+
         });
         
-    });
 
-    //variavel tipo contato e tipo endereço é para definir se é uma ong ou pessoa, as informações. 1 = pessoa e 2 = ong
+    application.post('/cadastrarONG/salvar', function(req,res) {
+
+      //res.send(dados);
+
+    let dados = req.body;
+
+    // MODO JSON, ATIVAR!!!
+
+    let pessoa = {
+
+      cpf_pessoa  : dados.cpf_pessoa,
+      nome_pessoa : dados.nome_pessoa,
+      dataNascimento : '1994-08-12',
+      profissao : dados.profissao,
+      estadoCivil : dados.estadoCivil,
+      sexo : 'M',
+      senha : "teste"
+
+    };
+
+    let ong = {
+
+      nomeFantasia  : dados.nomeFantasia,
+      razaoSocial : dados.razaoSocial,
+      cnpj : dados.cnpj,
+      site : dados.site,
+      dataFundacao : dados.dataFundacao,
+      areaDeAtuacao : dados.areaDeAtuacao,
+      cpfResponsavel : dados.cpf_pessoa //é isso mesmo!
+
+    };
+
+    let banco = {
+
+      codigo_banco  : 12345, //dados.codigo_banco ,
+      agencia :  54321, //dados.agencia ,
+      conta :   2468,//dados.conta,// 
+      nome :  'Conta do Varildo', //dados.nome,
+      cod_ong : dados.cnpj // é isso mesmo!
+
+    };
+
+     let endereco = {
+
+      tipo_de_endereco : 0,
+      cidade  : dados.cidade,
+      rua : dados.rua,
+      bairro : dados.bairro,
+      numero : dados.numero,
+      uf : dados.uf, 
+      complemento : dados.complemento,
+      cep : dados.cep,
+      end_fk_ref_ong : dados.cpnj,
+      end_fk_ref_pessoa : "0"
+
+    };
+
+    let contato = {
+
+      telefone1_contato  : dados.telefone1_contato,
+      telefone2_contato : dados.telefone2_contato,
+      email_contato : dados.email_contato,
+      tipo_de_contato : 0,
+      cont_fk_ref_ong : dados.cnpj, // é isso mesmo!
+      cont_fk_ref_pessoa : "0"
+
+    };
+
+    
+      let connection = application.config.dbConnection();
+      
+
+      let modeloPessoaDAO = application.app.models.modeloPessoaDAO;
+      let modeloOngDAO = application.app.models.modeloOngDAO;
+      let modeloBancoDAO = application.app.models.modeloBancoDAO;
+      let modeloEnderecoDAO = application.app.models.modeloEnderecoDAO;
+      let modeloContatoDAO = application.app.models.modeloContatoDAO;
 
 
-    app.post('/cadastroONG/salvar', function(req, res){
-        console.log("Cadastro ONG");
+      modeloPessoaDAO.inserirPessoa(pessoa, connection, 
 
-        console.log(req.body);
-        res.send(req.body);
+            //CallBack
+            function(error, results){     
 
-        var requestSql = dbConnection.request();
+              if(error){
+                res.send("Deu pau véi! " + error);
+              }
 
+            //      res.redirect("/testeSelect");
+             console.log("Inserção sucedida: ");
+             console.log(pessoa);
+          } //fim CallBack   
 
-        var nomeOng = req.body.nome;
-        var cnpj = req.body.cnpj;
-        var nomeResponsavel = req.body.nomeResponsavel;
-        var cpfResponsavel = req.body.cpfResponsavel;
-        var telefone = req.body.telefone;
-        var celular = req.body.celular;
-        var email = req.body.email;
-        var site = req.body.site;
-        var rua = req.body.rua;
-        var bairro = req.body.bairro;
-        var numero = req.body.numero;
-        var cod_area = req.body.area;
-
-       // requestSql.query("insert into Pessoa(nome_pessoa,cpf_pessoa) values('${nomeResponsavel}','${cpfResponsavel}')");
-     //   var cod_responsavel = requestSql.query("select cod_pessoa from Pessoa where cpf_pessoa == '${cpfResponsavel}'");
-        requestSql.query("insert into ONG(nome_ong,cnpj,cod_responsavel,cod_area,site_ong) values ('${nomeOng}','${cnpj}','${cpfResponsavel}','${cod_area}','${site}')");
-    //    var cod_ong = requestSql.query("select cod_ong from ong where cnpj == '${req.body.cnpj}'");
-     //   requestSql.query("insert into telefone(cod_pessoa,telefone1_contato,telefone2_contato,email_contato,tipo_de_contato) values('${cod_ong}','${telefone}','${celular}','${email}','2')");
-     //   requestSql.query("insert into endereco(cod_pessoa,rua,bairro,numero,tipo_de_endereco) values('${cod_ong}','${rua}','${bairro}','${numero}','2')");
-    })
+        );  //fim model
 
 
-    /*
+      modeloOngDAO.inserirONG(ong, connection, 
 
-USE [DB_ONG-project]
-GO
+            //CallBack
+            function(error, results){     
 
-INSERT INTO [dbo].[Pessoa]
-           ([nome_pessoa]
-           ,[cpf_pessoa])
-     VALUES
-           (<nome_pessoa, varchar(40),>
-           ,<cpf_pessoa, varchar(11),>)
-GO
+              if(error){
+                res.send("Deu pau véi! " + error);
+              }
+            //      res.redirect("/testeSelect");
+            console.log("Inserção sucedida: ");
+            console.log(ong);
+
+          } //fim CallBack   
+
+        );  //fim model
+      
+      
+      modeloBancoDAO.inserirBanco(banco, connection, 
+
+            //CallBack
+            function(error, results){     
+
+              if(error){
+                res.send("Deu pau véi! " + error);
+              }
+
+            //      res.redirect("/testeSelect");
+            
+            console.log("Inserção sucedida: ");
+            console.log(banco);
+          } //fim CallBack   
+
+        );  //fim model
+
+
+      modeloEnderecoDAO.inserirEndereco(endereco, connection, 
+
+            //CallBack
+            function(error, results){     
+
+              if(error){
+                res.send("Deu pau véi! " + error);
+              }
+
+            //      res.redirect("/testeSelect");
+            
+            console.log("Inserção sucedida: ");
+            console.log(endereco);
+          } //fim CallBack   
+
+        );  //fim model
+
+      modeloContatoDAO.inserirContato(contato, connection, 
+
+            //CallBack
+            function(error, results){     
+
+              if(error){
+                res.send("Deu pau véi! " + error);
+              }
+
+            //      res.redirect("/testeSelect");
+            
+            console.log("Inserção sucedida: ");
+            console.log(contato);
+          } //fim CallBack   
+
+        );  //fim model
+
+
+   }); //fim APP.POST
+
+     
+
+  
 
 
 
-
-        execSQLQuery(`INSERT INTO Clientes(ID, Nome, CPF) VALUES(${id},'${nome}','${cpf}')`, res);
-INSERT INTO [dbo].[ONG]
-           ([nome_ong]
-           ,[cnpj]
-           ,[cod_responsavel]
-           ,[cod_area]
-           ,[site_ong])
-     VALUES
-           (<nome_ong, varchar(50),>
-           ,<cnpj, varchar(14),>
-           ,<cod_responsavel, int,>
-           ,<cod_area, int,>
-           ,<site_ong, varchar(50),>)
-GO
+  }
 
 
-
-
-    app.post('/cadastrarongs', function(req, res){
-    	const id = parseInt(req.body.id);
-        const nome = req.body.nomeFantasia.subString(0,100);
-        const cpf = req.body.cnpj.subString(0,100);
-        requestSql.query('insert into clientes(id, nome, cpf) values (${id},'${nome}','${cpf}')',res);
-    });*/
-};
