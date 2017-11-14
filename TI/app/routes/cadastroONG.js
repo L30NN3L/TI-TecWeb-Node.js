@@ -6,7 +6,7 @@ module.exports = function(application){
     application.get('/cadastroONG', function(req, res) {
        
 
-        res.render("cadastroONG");
+        res.render("cadastroONG", {validacao : {} , form : {} });
 
 
         });
@@ -16,7 +16,29 @@ module.exports = function(application){
 
       //res.send(dados);
 
-    let dados = req.body;
+
+
+    var dados = req.body;
+
+    //  res.send(dados);
+
+    req.assert('nomeFantasia','Nome Fantasia é obrigatório').notEmpty();
+    req.assert('cnpj','CNPJ é obrigatório').notEmpty();
+    req.assert('areaDeAtuacao','Área de Atuação é obrigatório').notEmpty();
+    req.assert('cpf_pessoa','CPF do Responsável é obrigatório').notEmpty();
+    req.assert('email','Email da ONG é obrigatório').notEmpty();
+    req.assert('email_contato','Email do Responsável é obrigatório').notEmpty();
+    
+    var errosValidacao = req.validationErrors();
+
+    if(errosValidacao){
+
+      res.render("cadastroONG", {validacao : errosValidacao, form : dados });
+      return;
+
+    }
+
+    //let chaveOng = dados.cnpj;
 
     // MODO JSON, ATIVAR!!!
 
@@ -27,7 +49,7 @@ module.exports = function(application){
       dataNascimento : '1994-08-12',
       profissao : dados.profissao,
       estadoCivil : dados.estadoCivil,
-      sexo : 'M',
+      sexo : dados.radioSexo,
       senha : "teste"
 
     };
@@ -40,17 +62,17 @@ module.exports = function(application){
       site : dados.site,
       dataFundacao : dados.dataFundacao,
       areaDeAtuacao : dados.areaDeAtuacao,
-      cpfResponsavel : dados.cpf_pessoa //é isso mesmo!
+      cpfResponsavel : pessoa.cpf_pessoa //é isso mesmo!
 
     };
 
     let banco = {
 
-      codigo_banco  : 12345, //dados.codigo_banco ,
+      codigo_banco  : Math.round(Math.random(1000000) * (Math.random(1000000) * 10) * 1000), //dados.codigo_banco ,
       agencia :  54321, //dados.agencia ,
       conta :   2468,//dados.conta,// 
-      nome :  'Conta do Varildo', //dados.nome,
-      cod_ong : dados.cnpj // é isso mesmo!
+      nome :  'Cliente', //dados.nome,
+      cod_ong : ong.cpnj // é isso mesmo!
 
     };
 
@@ -58,31 +80,39 @@ module.exports = function(application){
 
       tipo_de_endereco : 0,
       cidade  : dados.cidade,
-      rua : dados.rua,
+      rua : dados.logradouro,
       bairro : dados.bairro,
       numero : dados.numero,
-      uf : dados.uf, 
+      uf : dados.estado, 
       complemento : dados.complemento,
       cep : dados.cep,
-      end_fk_ref_ong : dados.cpnj,
-      end_fk_ref_pessoa : "0"
+      end_fk_ref_ong : ong.cnpj
+     // end_fk_ref_pessoa : "0"
 
     };
 
-    let contato = {
+    let contatoONG = {
 
       telefone1_contato  : dados.telefone1_contato,
       telefone2_contato : dados.telefone2_contato,
-      email_contato : dados.email_contato,
+      email_contato : dados.email,
       tipo_de_contato : 0,
-      cont_fk_ref_ong : dados.cnpj, // é isso mesmo!
-      cont_fk_ref_pessoa : "0"
+      cont_fk_ref_ong : ong.cnpj // é isso mesmo!
+      //cont_fk_ref_pessoa : "0"
 
     };
 
+    let contatoPessoa = {
+
+      email_contato : dados.email_contato,
+      tipo_de_contato : 1
+
+    }
+
     
-      let connection = application.config.dbConnection();
+      var connection = application.config.dbConnection();
       
+
 
       let modeloPessoaDAO = application.app.models.modeloPessoaDAO;
       let modeloOngDAO = application.app.models.modeloOngDAO;
@@ -97,7 +127,13 @@ module.exports = function(application){
             function(error, results){     
 
               if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela pessoa!");
+                console.log(error);
+                console.log(pessoa);
+                console.log("***********************");
                 res.send("Deu pau véi! " + error);
+                return;
               }
 
             //      res.redirect("/testeSelect");
@@ -114,7 +150,14 @@ module.exports = function(application){
             function(error, results){     
 
               if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela ong!");
+                console.log(error);
+                console.log(ong);
+                console.log("***********************");
+                
                 res.send("Deu pau véi! " + error);
+                return;
               }
             //      res.redirect("/testeSelect");
             console.log("Inserção sucedida: ");
@@ -131,7 +174,14 @@ module.exports = function(application){
             function(error, results){     
 
               if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela banco!");
+                console.log(error);
+                console.log(banco);
+                console.log("***********************");
+
                 res.send("Deu pau véi! " + error);
+                return;
               }
 
             //      res.redirect("/testeSelect");
@@ -149,7 +199,13 @@ module.exports = function(application){
             function(error, results){     
 
               if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela endereco!");
+                console.log(error);
+                console.log(endereco);    
+                console.log("***********************");
                 res.send("Deu pau véi! " + error);
+                return;
               }
 
             //      res.redirect("/testeSelect");
@@ -160,22 +216,53 @@ module.exports = function(application){
 
         );  //fim model
 
-      modeloContatoDAO.inserirContato(contato, connection, 
+      modeloContatoDAO.inserirContato(contatoONG, connection, 
 
             //CallBack
             function(error, results){     
 
               if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela contato!");
+                console.log(error);
+                console.log(contatoONG);
+                console.log("***********************");
                 res.send("Deu pau véi! " + error);
+                return;
               }
 
             //      res.redirect("/testeSelect");
             
             console.log("Inserção sucedida: ");
-            console.log(contato);
+            console.log(contatoONG);
           } //fim CallBack   
 
         );  //fim model
+
+      modeloContatoDAO.inserirContato(contatoPessoa, connection, 
+
+            //CallBack
+            function(error, results){     
+
+              if(error){
+                console.log("***********************");
+                console.log("Falha inserção tabela contato!");
+                console.log(error);
+                console.log(contatoONG);
+                console.log("***********************");
+                res.send("Deu pau véi! " + error);
+                return;
+              }
+
+            //      res.redirect("/testeSelect");
+            
+            console.log("Inserção sucedida: ");
+            console.log(contatoONG);
+          } //fim CallBack   
+
+        );  //fim model
+
+      res.redirect('/'); 
 
 
    }); //fim APP.POST

@@ -2,7 +2,7 @@ module.exports = function() {
 
 	this.getOngs = function(connection,callback){
 
-		connection.query('select * from ONG', callback); 
+		connection.query('select * from Endereco, ONG, Contato  group by ONG.cnpj', callback); 
 
       	connection.end();
 

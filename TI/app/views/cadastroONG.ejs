@@ -254,6 +254,17 @@
 	
 			<h1 align="center" >CADASTRO DE ONG</h1>
 					<fieldset>
+
+						<% if(validacao) { %>
+							<ul>
+								<% for(var j = 0; j < validacao.length; j++) { %>
+									<li>
+										<%= validacao[j].msg %>
+									</li>
+								<% } %>
+							</ul>
+						<% } %>
+
 					<form action="/cadastrarONG/salvar" method="POST">
 						<div class="panel-body">
 							<br>
@@ -261,43 +272,43 @@
 							<div class="row">
 								<div class="col-md-4">
 									<label for="nomeFantasia">Nome Fantasia</label>
-									<input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia"> <!-- Table ONG -->
+									<input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="<%=form.nomeFantasia %>"> <!-- Table ONG -->
 								</div>
 								<div class="col-md-4">
 									<label for="razaoSocial">Raz? Social</label>
-									<input type="text" class="form-control" id="razaoSocial" name="razaoSocial"> <!-- Table ONG -->
+									<input type="text" class="form-control" id="razaoSocial" name="razaoSocial" value="<%=form.razaoSocial %>" > <!-- Table ONG -->
 								</div>
 								<div class="col-md-4 cpf">
 									<label for="cnpj">CNPJ</label>
-									<input type="text" class="form-control" id="cnpj" name="cnpj"> <!-- Table ONG -->
+									<input type="text" class="form-control" id="cnpj" name="cnpj" value="<%=form.cnpj %>"> <!-- Table ONG -->
 								</div>								
 							</div>
 							
 							<div class="row">
 								<div class="col-md-4">
 									<label for="telefone1">Telefone 1</label>
-									<input type="text" class="form-control" id="telefone1_contato" name="telefone1_contato"> <!-- Table Contato -->
+									<input type="text" class="form-control" id="telefone1_contato" name="telefone1_contato" value="<%=form.telefone1_contato %>"> <!-- Table Contato -->
 								</div>
 								
 								<div class="col-md-4">
 									<label for="telefone2">Telefone 2</label>
-									<input type="text" class="form-control" id="telefone2_contato" name="telefone2_contato"> <!-- Table Contato -->
+									<input type="text" class="form-control" id="telefone2_contato" name="telefone2_contato" value="<%=form.telefone2_contato %>"> <!-- Table Contato -->
 								</div>
 									
 								<div class="col-md-4">
 									<label for="dtNascimento">Data de fundação</label>
-									<input type="text" class="form-control calendario" id="dataFundacao" name="dataFundacao" readonly="readonly"> <!-- Table ONG -->
+									<input type="text" class="form-control calendario" id="dataFundacao" name="dataFundacao" value="<%=form.dataFundacao %>"> <!-- Table ONG -->
 								</div>
 								
 								<div class="col-md-4">
 									<label for="email">Email</label>
-									<input type="text" class="form-control" id="email" name="email"> <!-- Table ONG -->
+									<input type="text" class="form-control" id="email" name="email" value="<%=form.email %>"> <!-- Table ONG -->
 								</div>
 								
 								<div class="col-md-4">
 									<label for="areaAtuacao">?rea de atua?o</label>
 									<select class="form-control" id="areaDeAtuacao" name="areaDeAtuacao"> <!-- Table ONG -->
-										<option value="">Selecione</option>         
+										<option value="<%=form.areaDeAtuacao %>" > Selecione </option>         
 											   	<option value="Animais">ONG de Animais</option>        
 												
 												<option value="Apoio a Mulheres">ONG de Apoio a Mulheres</option>        
@@ -346,7 +357,7 @@
 																
 								<div class="col-md-4">
 									<label for="site">Site da institui?o</label> 
-									<input type="text" class="form-control" id="site" name="site"> <!-- Table ONG -->
+									<input type="text" class="form-control" id="site" name="site" value="<%=form.site %>"> <!-- Table ONG -->
 								</div>
 							
 							</div>
@@ -356,12 +367,12 @@
 							<div class="row">
 								<div class="col-md-6">
 									<label for="nome_pessoa">Nome completo</label>
-									<input type="text" class="form-control" id="nome_pessoa" name="nome_pessoa"> 
+									<input type="text" class="form-control" id="nome_pessoa" name="nome_pessoa" value="<%=form.nome_pessoa %>" > 
 									<!-- Table Pessoa -->
 								</div>
 								<div class="col-md-4">
 									<label for="dataNascimento">Data de nascimento</label>
-									<input type="text" class="form-control calendario" id="dataNascimento" name="dataNascimetno" readonly="readonly">
+									<input type="text" class="form-control calendario" id="dataNascimento" name="dataNascimetno" value="<%=form.dataNascimento %>">
 									<!-- Table Pessoa -->
 								</div>
 								<div class="col-md-2">
@@ -378,7 +389,7 @@
 								<div class="col-md-4">
 									<label for="estadoCivil">Estado Civil</label>
 									<select class="form-control" id="estadoCivil" name="estadoCivil"> <!-- Table Pessoa -->
-										<option value="">Selecione</option>
+										<option value="<%=form.estadoCivil %>">Selecione</option>
 										<option value="solteiro">Solteiro(a)</option>
 										<option value="casado">Casado(a)</option>
 										<option value="divorciado">Divorciado(a)</option>
@@ -390,7 +401,7 @@
 								<div class="col-md-4">
 									<label for="escolaridade">Escolaridade</label>
 									<select class="form-control" id="escolaridade" name="escolaridade">
-										<option value="">Selecione</option>
+										<option value="<%=form.escolaridade %>">Selecione</option>
 										<option value="analfabeto">Analfabeto(a)</option>
 										<option value="fundamentalInomp">Fundamental - Incompleto</option>
 										<option value="fundamentoalComp">Fundamental - Completo</option>
@@ -408,8 +419,8 @@
 								</div>
 								
 								<div class="col-md-4">
-									<label for="profissao">Profiss?</label>
-									<input type="text" class="form-control" id="profissao" name="profissao"> <!-- Table Pessoa -->
+									<label for="profissao">Profissão</label>
+									<input type="text" class="form-control" id="profissao" name="profissao" value="<%=form.profissao %>"> <!-- Table Pessoa -->
 								</div>
 							</div>
 							
@@ -417,47 +428,47 @@
 																			
 								<div class="col-md-4 cpf">
 									<label for="cpf">CPF</label>
-									<input type="text" class="form-control" id="cpf_pessoa" name="cpf_pessoa"> <!-- Table Pessoa -->
+									<input type="text" class="form-control" id="cpf_pessoa" name="cpf_pessoa" value="<%=form.cpf_pessoa %>"> <!-- Table Pessoa -->
 								</div>
 								
 								<div class="col-md-4">
-									<label for="email">Endere? de Email</label>
-									<input type="text" class="form-control" id="email" name="email">
+									<label for="email_contato">Endereço de Email</label>
+									<input type="text" class="form-control" id="email_contato" name="email_contato" value="<%=form.email_contato %>">
 								</div>
 							</div>
 							<br>
-							<legend>Endere? da Institui?o</legend>
+							<legend>Endereço da Institução</legend>
 							<div class="row">
 								<div class="col-md-6">
 									<label for="logradouro">Logradouro</label>
-									<input type="text" class="form-control" id="logradouro" name="logradouro">
+									<input type="text" class="form-control" id="logradouro" name="logradouro" value="<%=form.logradouro %>">
 								</div>
 								<div class="col-md-2">
-									<label for="numero">N?mero</label>
-									<input type="text" class="form-control" id="numero" name="numero">
+									<label for="numero">Número</label>
+									<input type="text" class="form-control" id="numero" name="numero" value="<%=form.numero %>">
 								</div>
 								<div class="col-md-4">
 									<label for="complemento">Complemento</label>
-									<input type="text" class="form-control" id="complemento" name="complemento">
+									<input type="text" class="form-control" id="complemento" name="complemento" value="<%=form.complemento %>">
 								</div>
 							</div>
 							
 							<div class="row">
 								<div class="col-md-3">
 									<label for="bairro">Bairro</label>
-									<input type="text" class="form-control" id="bairro" name="bairro">
+									<input type="text" class="form-control" id="bairro" name="bairro" value="<%=form.bairro %>">
 								</div>
 								<div class="col-md-3">
 									<label for="cidade">Cidade</label>
-									<input type="text" class="form-control" id="cidade" name="cidade">
+									<input type="text" class="form-control" id="cidade" name="cidade" value="<%=form.cidade %>">
 								</div>
 								<div class="col-md-3">
 									<label for="estado">UF</label>
-									<input type="text" class="form-control" id="estado" name="estado">
+									<input type="text" class="form-control" id="estado" name="estado" value="<%=form.estado %>">
 								</div>
 								<div class="col-md-3">
 									<label for="cep">CEP</label>
-									<input type="text" class="form-control" id="cep" name="cep">
+									<input type="text" class="form-control" id="cep" name="cep" value="<%=form.cep %>">
 								</div>
 							</div>
 
